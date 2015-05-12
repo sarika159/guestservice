@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+ <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://com/test/webservices/guestservice" xmlns:guest="http://webservices.guestservice.com" targetNamespace="http://com/test/webservices/guestservice" elementFormDefault="qualified">  
+      <xsd:import namespace="http://webservices.guestservice.com" schemaLocation="GuestDetails.xsd"/>  
+      <xsd:element name="GuestDetailsRequest">  
+           <xsd:complexType>  
+                <xsd:sequence>  
+                     <xsd:element name="guestId" type="xsd:string"/>  
+                </xsd:sequence>  
+           </xsd:complexType>  
+      </xsd:element>  
+      <xsd:element name="GuestDetailsResponse">  
+           <xsd:complexType>  
+                <xsd:sequence>  
+                     <xsd:element name="GuestDetails" type="guest:Guest"/>  
+                </xsd:sequence>  
+           </xsd:complexType>  
+      </xsd:element>  
+ </xsd:schema>  
